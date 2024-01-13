@@ -14,6 +14,20 @@
 ---
 ---
 
+### tl;dr
+
+Basic usage of changes for this fork, will issue a diagnostic warning `#warning WEBSOCKETS_USE_GIGA_R1_WIFI in message.hpp`; this is nothing to worry about.
+
+```ino
+#define WEBSOCKETS_USE_GIGA_R1_WIFI 1
+#include <WiFi.h>
+#include <WebSockets2_Generic.h>
+```
+
+As it is a header only library, can be installed without dependencies for use in this style with GIGA R1 WiFi board. Tested use of classes `WebsocketsServer`,
+`WebsocketsClient`, `WebsocketsMessage`.
+
+
 ## Table of Contents
 
 * [Why do we need this WebSockets2_Generic library](#why-do-we-need-this-websockets2_generic-library)
@@ -199,6 +213,7 @@ This [**WebSockets_Generic2** library](https://github.com/khoih-prog/WebSockets2
 
 13. **RP2040W boards, such as RASPBERRY_PI_PICO_W**, using Cyw43439 WiFi or Ethernet
 
+14. **Arduino GIGA R1 WiFi**, using onboard WiFi module (the motivation for this fork, version 1.14)
 
 ---
 
@@ -210,6 +225,7 @@ This [**WebSockets_Generic2** library](https://github.com/khoih-prog/WebSockets2
 4. ESP32 and ESP8266 WiFi
 5. **Portenta_H7 built-in Murata WiFi**
 6. **RP2040W built-in CYW43439 WiFi**
+7. **GIGA R1 WiFi built-in Murata LBEE5KL1DX-883**
 
 ---
 

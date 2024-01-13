@@ -37,13 +37,13 @@
 
 /////////////////////////////////////////////////////
 
-#define WEBSOCKETS2_GENERIC_VERSION     "WebSockets2_Generic v1.13.2"
+#define WEBSOCKETS2_GENERIC_VERSION     "WebSockets2_Generic v1.13.3"
 
 #define WEBSOCKETS2_GENERIC_VERSION_MAJOR    1
 #define WEBSOCKETS2_GENERIC_VERSION_MINOR    13
-#define WEBSOCKETS2_GENERIC_VERSION_PATCH    2
+#define WEBSOCKETS2_GENERIC_VERSION_PATCH    3
 
-#define WEBSOCKETS2_GENERIC_VERSION_INT      1013002
+#define WEBSOCKETS2_GENERIC_VERSION_INT      1013003
 
 /////////////////////////////////////////////////////
 

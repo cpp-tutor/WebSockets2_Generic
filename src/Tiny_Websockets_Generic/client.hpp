@@ -10,7 +10,7 @@
   Built by Khoi Hoang https://github.com/khoih-prog/Websockets2_Generic
   Licensed under MIT license
   
-  Version: 1.13.2
+  Version: 1.13.3
 
   Version Modified By   Date      Comments
   ------- -----------  ---------- -----------
@@ -28,6 +28,7 @@
   1.13.0  K Hoang      11/10/2022 Add support to RP2040W using CYW43439 WiFi
   1.13.1  K Hoang      24/11/2022 Using new WiFi101_Generic library
   1.13.2  K Hoang      06/12/2022 Fix compiler error using QNEthernet v0.17.0
+  1.13.3  R Spencer    14/04/2023 Add compatibility with Giga R1 WiFi board
  *****************************************************************************************************************************/
 
 #ifndef _CLIENT_HPP_
@@ -107,6 +108,12 @@
 
 /////////////////////////////////////////////////////
   
+#elif WEBSOCKETS_USE_GIGA_R1_WIFI
+  #warning WEBSOCKETS_USE_GIGA_R1_WIFI in client.hpp
+  #include <Tiny_Websockets_Generic/internals/ws_common_WiFi_Giga_R1.hpp> 
+
+/////////////////////////////////////////////////////
+
 #else
   #warning WEBSOCKETS_USE_ESP_WIFI in client.hpp
   #include <Tiny_Websockets_Generic/internals/ws_common.hpp>  
@@ -258,7 +265,7 @@ namespace websockets2_generic
       void _handlePing(WebsocketsMessage);
       void _handlePong(WebsocketsMessage);
       void _handleClose(WebsocketsMessage);
-      
+  
       void upgradeToSecuredConnection();
   };
   

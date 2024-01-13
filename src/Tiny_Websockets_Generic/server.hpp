@@ -10,7 +10,7 @@
   Built by Khoi Hoang https://github.com/khoih-prog/Websockets2_Generic
   Licensed under MIT license
   
-  Version: 1.13.2
+  Version: 1.14.0
 
   Version Modified By   Date      Comments
   ------- -----------  ---------- -----------
@@ -95,8 +95,14 @@
 /////////////////////////////////////////////////////
 
 #elif WEBSOCKETS_USE_PORTENTA_H7_WIFI
-  #warning WEBSOCKETS_USE_PORTENTA_H7_WIFI in client.hpp
+  #warning WEBSOCKETS_USE_PORTENTA_H7_WIFI in server.hpp
   #include <Tiny_Websockets_Generic/internals/ws_common_WiFi_Portenta_H7.hpp> 
+
+/////////////////////////////////////////////////////
+  
+#elif WEBSOCKETS_USE_GIGA_R1_WIFI
+  #warning WEBSOCKETS_USE_GIGA_R1_WIFI in server.hpp
+  #include <Tiny_Websockets_Generic/internals/ws_common_WiFi_Giga_R1.hpp> 
 
 /////////////////////////////////////////////////////
     
